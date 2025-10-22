@@ -64,8 +64,8 @@ int main() {
     Polygon_with_holes_2 nfp = CGAL::minkowski_sum_2(fixed, reflected);
 
     // Setup SFML
-    const unsigned window_width = 1000;
-    const unsigned window_height = 800;
+    const unsigned window_width = 1200;
+    const unsigned window_height = 1000;
     sf::RenderWindow window(sf::VideoMode({window_width, window_height}), "NFP");
 
     // Bounding box do NFP
@@ -81,7 +81,7 @@ int main() {
     float poly_width = static_cast<float>(CGAL::to_double(max_x - min_x));
     float poly_height = static_cast<float>(CGAL::to_double(max_y - min_y));
 
-    float margin = 40.0f;
+    float margin = 70.0f;
     float scale_x = (window_width - margin * 2) / poly_width;
     float scale_y = (window_height - margin * 2) / poly_height;
     float scale = std::min(scale_x, scale_y);
